@@ -1,0 +1,130 @@
+SECTION.uiCard.none, .none {
+	display: none;
+}
+
+HTML {
+	height: 100%;
+}
+
+BODY {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	color: white;
+	font-family: HelveticaNeue, Helvetica, sans-serif;
+	overflow-x: hidden;
+	background: black;
+}
+
+.uiStack {
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	-webkit-backface-visibility: hidden;
+  -webkit-perspective: 800;
+}
+
+.uiCard {
+	display: block;
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+	padding: 20px;
+	pointer-events: none;
+	-webkit-animation-duration: 4s;
+	-webkit-backface-visibility: hidden;
+	opacity: 1;
+}
+
+.uiCard.none    { display: none; }
+.uiCard.current { pointer-events: auto; }
+	
+.uiCard.slide.in           { -webkit-animation-name: slideInRight; }
+.uiCard.slide.out          { -webkit-animation-name: dontmove; }
+.uiCard.slide.reverse.in   { -webkit-animation-name: dontmove; }
+.uiCard.slide.reverse.out  { -webkit-animation-name: slideOutRight; }
+
+.uiCard.fade.in            { -webkit-animation-name: fadeIn; }
+.uiCard.fade.out           { -webkit-animation-name: dontmove; }
+.uiCard.fade.reverse.in    { -webkit-animation-name: dontmove; }
+.uiCard.fade.reverse.out   { -webkit-animation-name: fadeOut; }
+
+.uiCard.cube.in            { -webkit-animation-name: cubeInLeft; }
+.uiCard.cube.out           { -webkit-animation-name: dontmove; }
+.uiCard.cube.reverse.in    { -webkit-animation-name: dontmove; }
+.uiCard.cube.reverse.out   { -webkit-animation-name: cubeOutLeft; }
+
+.uiCard.flip.in            { -webkit-animation-name: flipAntiClock; }
+.uiCard.flip.out           { -webkit-animation-name: flipClockwise; }
+.uiCard.flip.reverse.in    { -webkit-animation-name: flipClockwise; }
+.uiCard.flip.reverse.out   { -webkit-animation-name: flipAntiClock; }
+
+@-webkit-keyframes dontmove {
+	from { }
+	to { }
+}
+@-webkit-keyframes slideInRight {
+	from { -webkit-transform: translateX(100%); }
+	to { -webkit-transform: translateX(0%); }
+}
+@-webkit-keyframes slideInReft {
+	from { -webkit-transform: translateX(-100%); }
+	to { -webkit-transform: translateX(0%); }
+}
+@-webkit-keyframes slideOutRight {
+	from { -webkit-transform: translateX(0%); }
+	to { -webkit-transform: translateX(100%); }
+}
+@-webkit-keyframes slideOutLeft {
+	from { -webkit-transform: translateX(0%); }
+	to { -webkit-transform: translateX(-100%); }
+}
+@-webkit-keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@-webkit-keyframes fadeOut {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+@-webkit-keyframes zoomCenterIn {
+	from { -webkit-transform: scale( 0.2 ); }
+	to { -webkit-transform: scale( 1 ); }
+}
+@-webkit-keyframes flipAntiClock {
+	from { -webkit-transform: rotateY(180deg); }
+	to { -webkit-transform: rotateY(0deg); }
+}
+@-webkit-keyframes flipClockwise {
+	from { -webkit-transform: rotateY(0deg); }
+	to { -webkit-transform: rotateY(-180deg); }
+}
+@-webkit-keyframes cubeOutLeft {
+	from { -webkit-transform: rotateY(0deg) translateX(0%); }
+	to { -webkit-transform: rotateY(-90deg) translateX(-100%); }
+}
+
+#splash {
+	background-image: -webkit-linear-gradient(top, #102d6f, #4e0717);
+}
+
+#hp {
+	background-image: -webkit-linear-gradient(top, #2d106f, #074e17);
+}
+
+.uiCard {
+	padding: 30px;
+}
+#a { background: #2d106f; }
+#b { background: #d106f1; }
+#c { background: #106f1c; }
+#d { background: #06f1c5; }
+#e { background: #6f1c50; }
+#f { background: #f1c50f; }
+#g { background: #1c50f3; }
