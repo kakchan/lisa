@@ -1,7 +1,7 @@
 define( "app", [ "lib/polyfills", "lib/jquery", "lib/jquery-nohtml", "ui" ], function( p, $, nohtml, ui ) {
 	var app = new ui.Stack({ parent: "body"	});
 
-	var transitions = [ "slide", "fade", "flip" ];
+	var transitions = [ "slide", "fade", "flip", "zoom" ];
 
 	var ids = "a,b,c,d,e,f,g".split(",");
 	var pages = ids.map( function( id, index ) {

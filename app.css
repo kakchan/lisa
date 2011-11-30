@@ -35,35 +35,40 @@ BODY {
 	position: absolute;
 	width: 100%;
 	min-height: 100%;
-	padding: 20px;
 	pointer-events: none;
-	-webkit-animation-duration: 4s;
+	-webkit-animation-duration: 0.3s;
 	-webkit-backface-visibility: hidden;
+	-webkit-transform-origin: 50% 50%;
 	opacity: 1;
 }
 
 .uiCard.none    { display: none; }
 .uiCard.current { pointer-events: auto; }
 	
-.uiCard.slide.in           { -webkit-animation-name: slideInRight; }
-.uiCard.slide.out          { -webkit-animation-name: dontmove; }
-.uiCard.slide.reverse.in   { -webkit-animation-name: dontmove; }
-.uiCard.slide.reverse.out  { -webkit-animation-name: slideOutRight; }
+.uiCard.slide-in           { -webkit-animation-name: slideInRight; }
+.uiCard.slide-out          { -webkit-animation-name: dontmove; }
+.uiCard.slide-reverse-in   { -webkit-animation-name: dontmove; }
+.uiCard.slide-reverse-out  { -webkit-animation-name: slideOutRight; }
 
-.uiCard.fade.in            { -webkit-animation-name: fadeIn; }
-.uiCard.fade.out           { -webkit-animation-name: dontmove; }
-.uiCard.fade.reverse.in    { -webkit-animation-name: dontmove; }
-.uiCard.fade.reverse.out   { -webkit-animation-name: fadeOut; }
+.uiCard.fade-in            { -webkit-animation-name: fadeIn; }
+.uiCard.fade-out           { -webkit-animation-name: dontmove; }
+.uiCard.fade-reverse-in    { -webkit-animation-name: dontmove; }
+.uiCard.fade-reverse-out   { -webkit-animation-name: fadeOut; }
 
-.uiCard.cube.in            { -webkit-animation-name: cubeInLeft; }
-.uiCard.cube.out           { -webkit-animation-name: dontmove; }
-.uiCard.cube.reverse.in    { -webkit-animation-name: dontmove; }
-.uiCard.cube.reverse.out   { -webkit-animation-name: cubeOutLeft; }
+.uiCard.cube-in            { -webkit-animation-name: cubeInLeft; }
+.uiCard.cube-out           { -webkit-animation-name: dontmove; }
+.uiCard.cube-reverse-in    { -webkit-animation-name: dontmove; }
+.uiCard.cube-reverse-out   { -webkit-animation-name: cubeOutLeft; }
 
-.uiCard.flip.in            { -webkit-animation-name: flipAntiClock; }
-.uiCard.flip.out           { -webkit-animation-name: flipClockwise; }
-.uiCard.flip.reverse.in    { -webkit-animation-name: flipClockwise; }
-.uiCard.flip.reverse.out   { -webkit-animation-name: flipAntiClock; }
+.uiCard.flip-in            { -webkit-animation-name: flipLeftIn; }
+.uiCard.flip-out           { -webkit-animation-name: flipLeftOut; }
+.uiCard.flip-reverse-in    { -webkit-animation-name: flipRightIn; }
+.uiCard.flip-reverse-out   { -webkit-animation-name: flipRightOut; }
+
+.uiCard.zoom-in           { -webkit-animation-name: zoomCenterIn; }
+.uiCard.zoom-out          { -webkit-animation-name: dontmove; }
+.uiCard.zoom-reverse-in   { -webkit-animation-name: dontmove; }
+.uiCard.zoom-reverse-out  { -webkit-animation-name: zoomCenterOut; }
 
 @-webkit-keyframes dontmove {
 	from { }
@@ -94,33 +99,38 @@ BODY {
 	to { opacity: 0; }
 }
 @-webkit-keyframes zoomCenterIn {
-	from { -webkit-transform: scale( 0.2 ); }
-	to { -webkit-transform: scale( 1 ); }
+	from { -webkit-transform: scale( 0.2 ); opacity: 0; }
+	to { -webkit-transform: scale( 1 ); opacity: 1; }
 }
-@-webkit-keyframes flipAntiClock {
-	from { -webkit-transform: rotateY(180deg); }
-	to { -webkit-transform: rotateY(0deg); }
+@-webkit-keyframes zoomCenterOut {
+	from { -webkit-transform: scale( 1 ); opacity: 1; }
+	to { -webkit-transform: scale( 0.2 ); opacity: 0; }
 }
-@-webkit-keyframes flipClockwise {
-	from { -webkit-transform: rotateY(0deg); }
+@-webkit-keyframes flipLeftIn {
+	from { -webkit-transform: rotateY( 180deg ); -webkit-animation-timing-function: ease-in; }
+	50% { -webkit-transform: rotateY( 90deg ) scale( 0.85 ); -webkit-animation-timing-function: ease-out; }
+	to { -webkit-transform: rotateY( 0deg ); }
+}
+@-webkit-keyframes flipLeftOut {
+	from { -webkit-transform: rotateY(0deg); -webkit-animation-timing-function: ease-in; }
+	50% { -webkit-transform: rotateY( -90deg ) scale( 0.85 ); -webkit-animation-timing-function: ease-out; }
 	to { -webkit-transform: rotateY(-180deg); }
+}
+@-webkit-keyframes flipRightIn {
+	from { -webkit-transform: rotateY(-180deg); -webkit-animation-timing-function: ease-in; }
+	50% { -webkit-transform: rotateY( -90deg ) scale( 0.85 ); -webkit-animation-timing-function: ease-out; }
+	to { -webkit-transform: rotateY (0deg ); }
+}
+@-webkit-keyframes flipRightOut {
+	from { -webkit-transform: rotateY(0deg); -webkit-animation-timing-function: ease-in; }
+	50% { -webkit-transform: rotateY( 90deg ) scale( 0.85 ); -webkit-animation-timing-function: ease-out; }
+	to { -webkit-transform: rotateY( 180deg ); }
 }
 @-webkit-keyframes cubeOutLeft {
 	from { -webkit-transform: rotateY(0deg) translateX(0%); }
 	to { -webkit-transform: rotateY(-90deg) translateX(-100%); }
 }
 
-#splash {
-	background-image: -webkit-linear-gradient(top, #102d6f, #4e0717);
-}
-
-#hp {
-	background-image: -webkit-linear-gradient(top, #2d106f, #074e17);
-}
-
-.uiCard {
-	padding: 30px;
-}
 #a { background: #2d106f; }
 #b { background: #d106f1; }
 #c { background: #106f1c; }
