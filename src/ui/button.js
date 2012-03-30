@@ -17,7 +17,7 @@ define( [ "lib/jquery", "ui/abstractwidget" ], function( $, AbstractWidget ) {
 			disable = disable !== false;
 			if( this.disabled !== disable ) {
 				this.disabled = disable;
-				this.toggleClass( "disabled", this.disabled );
+				this.$el.toggleClass( "disabled", this.disabled );
 				this.fire( this.disabled ? "disable" : "enable", this );
 			}
 		},
