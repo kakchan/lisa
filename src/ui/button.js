@@ -1,4 +1,4 @@
-define( [ "lib/jquery", "ui/abstractwidget" ], function( $, AbstractWidget ) {
+define( [ "ui/abstractwidget" ], function( AbstractWidget ) {
 	return AbstractWidget.extend({
 		defaults : {
 			label: "",                 // text of the button
