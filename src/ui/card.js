@@ -4,7 +4,7 @@ define( [ "lib/jquery", "ui/abstractwidget" ], function( $, AbstractWidget ) {
 		defaults : {
 			title: null,               // name of the card (optional)
 			children: [],              // contents of the card
-			show: false,               // show the contents of the card immediately
+			show: false               // show the contents of the card immediately
 		},
 		_initModelView: function() {
 			this._super();

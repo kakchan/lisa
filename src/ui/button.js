@@ -1,9 +1,8 @@
-
 define( [ "lib/jquery", "ui/abstractwidget" ], function( $, AbstractWidget ) {
 	return AbstractWidget.extend({
 		defaults : {
 			label: "",                 // text of the button
-			disabled: false,           // create a disabled button
+			disabled: false           // create a disabled button
 		},
 
 		_initModelView: function() {

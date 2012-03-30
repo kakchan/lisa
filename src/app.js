@@ -1,4 +1,4 @@
-define( "app", [ "lib/polyfills", "lib/jquery", "lib/jquery-nohtml", "ui" ], function( p, $, nohtml, ui ) {
+define( [ "lib/polyfills", "lib/jquery", "lib/jquery-nohtml", "ui" ], function( p, $, nohtml, ui ) {
 	var app = new ui.Stack({ parent: "body"	});
 
 	var transitions = [ "slide", "fade", "flip", "zoom" ];
