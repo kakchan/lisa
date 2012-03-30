@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <title>JS Unit Test</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="../lib/mocha.css" />
+  <script type="text/javascript" src="../lib/mocha.js"></script>
+  <script type="text/javascript" src="../lib/expect.js"></script>
+  <script type="text/javascript" src="../../src/lib/require.js"></script>
+  <script>mocha.setup('tdd')</script>
+  <script type="text/javascript" src="test-button.js"></script>
+</head>
+<body>
+<div id="mocha"></div>
+<script>
+  String.prototype.capitalizeFirstLetter = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+  };
+
+  (function( widgetNames ) {
+    require( { baseUrl: "../../src/" }, widgetNames.map( function( name ) { return "ui/" + name; } ), function() {
+      for ( var i=0; i<arguments.length; i++ ) {
+        window[ widgetNames[i].capitalizeFirstLetter() ] = arguments[i];
+      }
+      mocha.run();
+    } );
+  })( [ "button", "card" ] );
+</script>
+</body>
+</html>

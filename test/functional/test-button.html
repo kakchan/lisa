@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Sample App</title>
+  <link rel="stylesheet" type="text/css" href="../../app.css">
+  <script src="../../src/lib/require.js"></script>
+</head>
+<body>
+  <script>
+    require( { baseUrl: "../../src/" }, [ "lib/jquery-nohtml", "ui/button" ], function( nohtml, Button ) {
+      /* Button 1 */
+      var button1 = new Button( {
+        label: "Test 1",
+        onclick: function() {
+          alert( "Test 1 - First Call" );
+        }
+      } );
+      button1.on( "click", function() { alert( "Test 1 - Second Call" ); });
+      button1.on( "click", function() { alert( "Test 1 - Third Call" ); });
+      button1.attach( "BODY" );
+    } );
+  </script>
+</body>
+</html>
