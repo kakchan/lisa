@@ -1,4 +1,4 @@
-suite( "TopNavTest", function() {
+suite( "ButtonTest", function() {
 	setup( function() {
 		this.button1 = new Button( {
 			label: "Button 1"
