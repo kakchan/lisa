@@ -70,6 +70,11 @@ BODY {
 .uiCard.zoom-reverse-in   { -webkit-animation-name: dontmove; }
 .uiCard.zoom-reverse-out  { -webkit-animation-name: zoomCenterOut; }
 
+.uiCard.cube-in           { -webkit-animation-name: cubeInLeft; }
+.uiCard.cube-out          { -webkit-animation-name: cubeOuLeftt; }
+.uiCard.cube-reverse-in   { -webkit-animation-name: cubeInRight; }
+.uiCard.cube-reverse-out  { -webkit-animation-name: cubeOutRight; }
+
 @-webkit-keyframes dontmove {
 	from { }
 	to { }
@@ -78,7 +83,7 @@ BODY {
 	from { -webkit-transform: translateX(100%); }
 	to { -webkit-transform: translateX(0%); }
 }
-@-webkit-keyframes slideInReft {
+@-webkit-keyframes slideInLeft {
 	from { -webkit-transform: translateX(-100%); }
 	to { -webkit-transform: translateX(0%); }
 }
@@ -108,28 +113,29 @@ BODY {
 }
 @-webkit-keyframes flipLeftIn {
 	from { -webkit-transform: rotateY( 180deg ); -webkit-animation-timing-function: ease-in; }
-	50% { -webkit-transform: rotateY( 90deg ) scale( 0.85 ); -webkit-animation-timing-function: ease-out; }
+	50% { -webkit-transform: rotateY( 90deg ) scale( 0.80 ); -webkit-animation-timing-function: ease-out; }
 	to { -webkit-transform: rotateY( 0deg ); }
 }
 @-webkit-keyframes flipLeftOut {
 	from { -webkit-transform: rotateY(0deg); -webkit-animation-timing-function: ease-in; }
-	50% { -webkit-transform: rotateY( -90deg ) scale( 0.85 ); -webkit-animation-timing-function: ease-out; }
+	50% { -webkit-transform: rotateY( -90deg ) scale( 0.80 ); -webkit-animation-timing-function: ease-out; }
 	to { -webkit-transform: rotateY(-180deg); }
 }
 @-webkit-keyframes flipRightIn {
 	from { -webkit-transform: rotateY(-180deg); -webkit-animation-timing-function: ease-in; }
-	50% { -webkit-transform: rotateY( -90deg ) scale( 0.85 ); -webkit-animation-timing-function: ease-out; }
+	50% { -webkit-transform: rotateY( -90deg ) scale( 0.80 ); -webkit-animation-timing-function: ease-out; }
 	to { -webkit-transform: rotateY (0deg ); }
 }
 @-webkit-keyframes flipRightOut {
 	from { -webkit-transform: rotateY(0deg); -webkit-animation-timing-function: ease-in; }
-	50% { -webkit-transform: rotateY( 90deg ) scale( 0.85 ); -webkit-animation-timing-function: ease-out; }
+	50% { -webkit-transform: rotateY( 90deg ) scale( 0.80 ); -webkit-animation-timing-function: ease-out; }
 	to { -webkit-transform: rotateY( 180deg ); }
 }
-@-webkit-keyframes cubeOutLeft {
+@-webkit-keyframes cubeInLeft {
 	from { -webkit-transform: rotateY(0deg) translateX(0%); }
 	to { -webkit-transform: rotateY(-90deg) translateX(-100%); }
 }
+
 
 #a { background: #2d106f; }
 #b { background: #d106f1; }

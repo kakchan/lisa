@@ -26,34 +26,5 @@ define( [ "lib/polyfills", "lib/jquery", "lib/jquery-nohtml", "ui" ], function( 
 		});
 	});
 
-/*
-	var splash = new ui.Card({
-		id: "splash",
-		title: "Splash",
-		children: [
-			{ tag: "H1", text: "Application Splash Page" },
-			new ui.Button({
-				label: "Login",
-				onclick: function() {
-					app.push( hp, { method: "cube" } );
-				}
-			})
-		]
-	});
-
-	var hp = new ui.Card({
-		id: "hp",
-		title: "HomePage",
-		children: [
-			{ tag: "H1", text: "HomePage" },
-			new ui.Button({
-				label: "Logout",
-				onclick: function() {
-					app.pop();
-				}
-			})
-		]
-	});
-*/
 	app.push( pages[0] );
 });

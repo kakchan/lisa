@@ -31,7 +31,7 @@ define( [ "lib/jquery", "ui/abstractwidget" ], function( $, AbstractWidget ) {
 		},
 		_topCard: function() {
 			return this._stack.length ? this._stack[ this._stack.length - 1 ].card : null;
-		},	
+		},
 		_mainTemplate: function() { return (
 			{ tag: 'DIV', id: this.id(), cls: "uiStack", children: this.config.children }
 		); }
