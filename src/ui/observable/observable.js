@@ -20,6 +20,7 @@ define( [ "lib/jquery", "lib/class" ], function( $, Class ) {
 			},
 			on: function( type, fn, params, thisp ) { // on: synonymous with addEvent, addObserver, subscribe
 				getObs.call( this, type.toLowerCase() ).push( { cb : fn, args : params || [] , cx : thisp || this } );
+				
 				return this; // make observable functions chainable
 			},
 			fire: function( type ) { // fire: synonymous with fireEvent, observe, publish

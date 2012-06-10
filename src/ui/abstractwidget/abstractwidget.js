@@ -1,4 +1,4 @@
-define( [ "ui/observable" ], function( Observable ){
+define( [ "ui/observable/observable" ], function( Observable ){
 	return Observable.extend({
 		defaults : {
 			id: null,     // the id of the widget

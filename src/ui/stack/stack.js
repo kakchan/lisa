@@ -1,5 +1,6 @@
 // simple view for containing pages
-define( [ "lib/jquery", "ui/abstractwidget" ], function( $, AbstractWidget ) {
+define( [ "lib/jquery", "ui/abstractwidget/abstractwidget" ], function( $, AbstractWidget ) {
+	loadCss("src/ui/stack/stack.css");
 	return AbstractWidget.extend({
 		defaults : {
 			show: null
@@ -25,7 +26,7 @@ define( [ "lib/jquery", "ui/abstractwidget" ], function( $, AbstractWidget ) {
 		},
 		_navigate: function( cardIn, cardOut, options, reverse ) {
 			options = $.extend( { method: "fade" }, options, { zIndex: ++this._animCounter } );
-			options.reverse = !reverse != !options.reverse; // XOR
+			options.reverse = !reverse !== !options.reverse; // XOR
 			cardOut && cardOut.hide( options );
 			cardIn && cardIn.show( options );
 		},

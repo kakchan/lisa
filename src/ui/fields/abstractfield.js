@@ -1,9 +1,9 @@
 /**
- * base class for all forms
+ * base class for all form fields
  * provides validation and returns data for api calls
  * @constructor
  */
-define( [ "ui/AbstractWidget" ], function( AbstractWidget ) {
+define( [ "ui/abstractwidget/abstractwidget" ], function( AbstractWidget ) {
 	return AbstractWidget.extend({
 		defaults: {
 			name : "", 			// (required) - name of the field

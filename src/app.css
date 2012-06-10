@@ -1,0 +1,23 @@
+HTML {
+	height: 100%;
+}
+
+BODY {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	color: white;
+	font-family: HelveticaNeue, Helvetica, sans-serif;
+	overflow-x: hidden;
+	background: black;
+}
+
+#a { background: #2d106f; }
+#b { background: #d106f1; }
+#c { background: #106f1c; }
+#d { background: #06f1c5; }
+#e { background: #6f1c50; }
+#f { background: #f1c50f; }
+#g { background: #1c50f3; }

@@ -1,7 +1,7 @@
-define( [ "ui/abstractwidget" ], function( AbstractWidget ) {
+define( [ "ui/abstractwidget/abstractwidget" ], function( AbstractWidget ) {
 	return AbstractWidget.extend({
 		defaults : {
-			label: "",                 // text of the button
+			label: "",                // text of the button
 			disabled: false           // create a disabled button
 		},
 
