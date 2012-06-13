@@ -1,13 +1,11 @@
 // simple view for containing other controls
-define( [ "lib/jquery", "ui/abstractwidget/abstractwidget" ], function( $, AbstractWidget ) {
-
-	loadCss("src/ui/card/card.css");
+define( [ "lib/jquery", "ui/abstractwidget/abstractwidget", "link!ui/card/card.css" ], function( $, AbstractWidget ) {
 
 	return AbstractWidget.extend({
 		defaults : {
 			title: null,               // name of the card (optional)
 			children: [],              // contents of the card
-			show: false               // show the contents of the card immediately
+			show: false                // show the contents of the card immediately
 		},
 		_initModelView: function() {
 			this._super();
