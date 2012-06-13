@@ -3,7 +3,22 @@
 <html>
 	<head>
 		<title>Sample App</title>
-		<script data-main="src/app" src="src/lib/require.js"></script>
+		<script src="src/lib/curl.js"></script>
+		<script>
+		var config = {
+			baseUrl: "src",
+			paths: {
+				"curl": "lib/curl.js", 
+			},
+			preloads: [
+				"src/lib/polyfills"
+			]
+		};
+		
+		curl( config, [ "lib/jquery", "lib/jquery-nohtml", "app" ]).then(function( $, create, App ) {
+			new App({});
+		});
+		</script>
 	</head>
 	<body></body>
 </html>
