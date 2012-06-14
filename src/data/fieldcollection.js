@@ -1,4 +1,4 @@
-define( [ "data/collection" ], function( Collection ) {
+define( [ "../collection" ], function( Collection ) {
 	return Collection.extend({
 		defaults: {
 			key: "name"
