@@ -1,4 +1,4 @@
-define( [ "lib/observable" ], function( Observable ){
+define( [ "lib/jquery", "lib/observable" ], function( $, Observable ){
 	return Observable.extend({
 		defaults : {
 			id: null,     // the id of the widget
