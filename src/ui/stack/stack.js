@@ -1,5 +1,5 @@
 // simple view for containing pages
-define( [ "lib/jquery", "ui/abstractwidget/abstractwidget", "link!ui/stack/stack.css" ], function( $, AbstractWidget ) {
+define( [ "lib/jquery", "../abstractwidget/abstractwidget", "link!./stack.css" ], function( $, AbstractWidget ) {
 
 	return AbstractWidget.extend({
 		defaults : {

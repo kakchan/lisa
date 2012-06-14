@@ -1,5 +1,5 @@
 // simple view for containing other controls
-define( [ "lib/jquery", "ui/abstractwidget/abstractwidget", "link!ui/card/card.css" ], function( $, AbstractWidget ) {
+define( [ "lib/jquery", "../abstractwidget/abstractwidget", "link!./card.css" ], function( $, AbstractWidget ) {
 
 	return AbstractWidget.extend({
 		defaults : {

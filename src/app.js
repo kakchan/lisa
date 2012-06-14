@@ -1,4 +1,4 @@
-define( [ "ui/stack/stack", "ui/card/card", "ui/button/button", "ui/abstractwidget/abstractwidget", "link!app.css" ], function( Stack, Card, Button, AbstractWidget ) {
+define( [ "ui/stack/stack", "ui/card/card", "ui/button/button", "ui/abstractwidget/abstractwidget", "link!./app.css" ], function( Stack, Card, Button, AbstractWidget ) {
 	
 	return AbstractWidget.extend({
 		init: function() {
