@@ -1,4 +1,4 @@
-define( [ "lib/jquery" ], function( $, undefined ) {
+define( [ "./jquery" ], function( $, undefined ) {
 	var doc = this.document;
 	
 	// ie 6, 7 and 8 have trouble with the type and names of dynamically created inputs

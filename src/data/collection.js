@@ -1,4 +1,4 @@
-define( [ "ui/Observable" ], function( Observable ) {
+define( [ "lib/observable" ], function( Observable ) {
  	return Observable.extend({
 		defaults: {
 			key: null,     // either the name of a field, or a function which generates the unique key

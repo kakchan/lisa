@@ -3,7 +3,7 @@
  * provides validation and returns data for api calls
  * @constructor
  */
-define( [ "../abstractwidget/abstractwidget" ], function( AbstractWidget ) {
+define( [ "../../abstractwidget/abstractwidget" ], function( AbstractWidget ) {
 	return AbstractWidget.extend({
 		defaults: {
 			name : "", 			// (required) - name of the field

@@ -1,6 +1,4 @@
-// simple view for containing other controls
 define( [ "lib/jquery", "../abstractwidget/abstractwidget", "link!./card.css" ], function( $, AbstractWidget ) {
-
 	return AbstractWidget.extend({
 		defaults : {
 			title: null,               // name of the card (optional)

@@ -3,7 +3,6 @@ define( [ "ui/stack/stack", "ui/card/card", "ui/button/button", "ui/abstractwidg
 	return AbstractWidget.extend({
 		init: function() {
 			var stack = new Stack({ parent: "body"	});
-
 			var transitions = [ "slide", "fade", "flip", "zoom" ];
 
 			var ids = "a,b,c,d,e,f,g".split(",");
