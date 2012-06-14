@@ -1,4 +1,4 @@
-define( [ "lib/jquery", "lib/class" ], function( $, Class ) {
+define( [ "./class" ], function( Class ) {
 	return Class.extend( (function() {
 		var handlersRe = /handler$/i;
 		function getObs( type ) {
@@ -8,7 +8,7 @@ define( [ "lib/jquery", "lib/class" ], function( $, Class ) {
 			init: function() {
 				this._observers = {};
 				for( var opt in this.config ) { // automatically install observers that are defined in the configuration
-					if( opt.indexOf('on') === 0 && $.type( this.config[ opt ] ) === "function" ) {
+					if( opt.indexOf('on') === 0 && ( typeof this.config[ opt ] === "function" ) ) {
 						this.on( opt.substring( 2 ).toLowerCase(), this.config[ opt ] );
 					}
 				}
