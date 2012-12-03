@@ -30,9 +30,7 @@ define( [ "../abstractwidget/abstractwidget" ], function( AbstractWidget ) {
 			}
 		},
 		_mainTemplate: function() { return (
-			{ tag: 'BUTTON', type: 'button', id: this.id(), cls: "uiButton uxBorder-all", onclick: this._clickHandler, children: [
-				{ tag: 'SPAN', cls: "label", text: this.config.label }
-			] }
+			{ tag: 'BUTTON', type: 'button', id: this.id(), cls: "btn btn-primary", onclick: this._clickHandler, text: this.config.label }
 		); }
 	});
 });

@@ -31,7 +31,7 @@ define( [ "../../abstractwidget/abstractwidget" ], function( AbstractWidget ) {
 			}
 		},
 		validate: function() {
-			var val = this._geVal(), req = this.require;
+			var val = this._getVal(), req = this.require;
 			if(req === false) {
 				return true;
 			} else if(req === true) {

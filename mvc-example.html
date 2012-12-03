@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Sample App</title>
+		<link rel="stylesheet" href="src/css/bootstrap.css" />
+		<script src="src/lib/curl.js"></script>
+		<script>
+		var config = {
+			baseUrl: "src",
+			paths: {
+				"curl": "lib/curl.js", 
+			},
+			preloads: [
+				"src/lib/polyfills"
+			]
+		};
+
+		curl(config, [
+			"lib/jquery",
+			"lib/jquery-nohtml",
+			"ui/stack/stack",
+			"ui/card/card",
+			"ui/button/button", 
+			"ui/abstractwidget/abstractwidget",
+			"ui/fields/textfield", 
+			"lib/model",
+			"link!app.css" ]
+		).then(function( $, create, Stack, Card, Button, AbstractWidget, TextField, Model ) {
+			
+			var App = AbstractWidget.extend({
+				init: function() {
+					var stack = new Stack({ parent: "body"  });
+
+					var model = window.model = new Model({
+						data: {
+							value1: "oh yeh!"
+						}
+					});
+
+					stack.push(new Card({
+						title: "Field Test",
+						children: [
+							new TextField({ id: "test", model: model, modelField: "value1" }),
+							new Button({ id: "button", label: "Validate" })
+						]
+					}));
+				}
+			});
+
+			new App({});
+		});
+		</script>
+	</head>
+	<body></body>
+</html>

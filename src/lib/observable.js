@@ -25,9 +25,15 @@ define( [ "./class" ], function( Class ) {
 			},
 			fire: function( type ) { // fire: synonymous with fireEvent, observe, publish
 				var params = Array.prototype.slice.call( arguments, 1 );
-				getObs.call( this, type.toLowerCase() ).slice().forEach( function( ob ) {
-					ob.cb.apply( ob.cx, ob.args.concat( params ) );
-				});
+				var callObserver = function(type) {
+					getObs.call(this, type).slice().forEach(function(ob) {
+						ob.cb.apply(ob.cx, ob.args.concat(params));
+					});
+				}.bind(this);
+				callObserver(type);
+				if (type.indexOf(".") > 0) {
+					callObserver(type.split(".")[0]);
+				}
 				return this; // make observable functions chainable
 			},
 			removeAllObservers: function() {
