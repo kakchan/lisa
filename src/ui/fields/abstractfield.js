@@ -3,8 +3,8 @@
  * provides validation and returns data for api calls
  * @constructor
  */
-define( [ "../../abstractwidget/abstractwidget" ], function( AbstractWidget ) {
-	return AbstractWidget.extend({
+define( [ "lib/view" ], function( View ) {
+	return View.extend({
 		defaults: {
 			name : "", 			// (required) - name of the field
 			require: false,	// validation requirements (false, true, regexp, function)
