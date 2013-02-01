@@ -3,12 +3,14 @@
 <html>
 <head>
   <title>Sample App</title>
-  <link rel="stylesheet" type="text/css" href="../../app.css">
-  <script src="../../src/lib/require.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../src/app.css">
+  <script src="../../src/lib/curl.js"></script>
 </head>
 <body>
   <script>
-    require( { baseUrl: "../../src/" }, [ "lib/jquery-nohtml", "ui/button" ], function( nohtml, Button ) {
+    curl( { baseUrl: "../../src/" },
+      [ "lib/jquery-nohtml", "ui/button/button" ],
+      function( nohtml, Button ) {
       /* Button 1 */
       var button1 = new Button( {
         label: "Test 1",

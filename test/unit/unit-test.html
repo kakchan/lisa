@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="../lib/mocha.css" />
   <script type="text/javascript" src="../lib/mocha.js"></script>
   <script type="text/javascript" src="../lib/expect.js"></script>
-  <script type="text/javascript" src="../../src/lib/require.js"></script>
+  <script type="text/javascript" src="../../src/lib/curl.js"></script>
   <script>mocha.setup('tdd')</script>
   <script type="text/javascript" src="test-button.js"></script>
 </head>
@@ -18,7 +18,8 @@
   };
 
   (function( widgetNames ) {
-    require( { baseUrl: "../../src/" }, widgetNames.map( function( name ) { return "ui/" + name; } ), function() {
+    curl( { baseUrl: "../../src/" },
+      widgetNames.map( function( name ) { return "ui/" + name + "/" + name; } ), function() {
       for ( var i=0; i<arguments.length; i++ ) {
         window[ widgetNames[i].capitalizeFirstLetter() ] = arguments[i];
       }
